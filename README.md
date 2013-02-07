@@ -1,4 +1,4 @@
-nicfont
+Nicfont
 =======
 
 NicFont
