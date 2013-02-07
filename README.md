@@ -17,23 +17,23 @@ Basicamente se debe importar el archivo de estilo nicfont.css y usar la siguient
      
     <!-- Dentro del <body> -->
     <ul class="nicfont"> 
-      <li id="raan">a</li>
-      <li id="raas">b</li>	
-      <li id="rio-san-juan">c</li>
-      <li id="chontales">d</li>
-      <li id="boaco">e</li>
-      <li id="matagalpa">f</li>
-      <li id="jinotega">g</li>
-      <li id="esteli">h</li>
-      <li id="madriz">i</li>
-      <li id="nueva-segovia">j</li>
-      <li id="chinandega">k</li>
-      <li id="leon">l</li>
-      <li id="managua">m</li>
-      <li id="masaya">n</li>
-      <li id="carazo">o</li>
-      <li id="granada">p</li>
-      <li id="rivas">q</li>
+      <li id="raan"></li>
+      <li id="raas"></li>	
+      <li id="rio-san-juan"></li>
+      <li id="chontales"></li>
+      <li id="boaco"></li>
+      <li id="matagalpa"></li>
+      <li id="jinotega"></li>
+      <li id="esteli"></li>
+      <li id="madriz"></li>
+      <li id="nueva-segovia"></li>
+      <li id="chinandega"></li>
+      <li id="leon"></li>
+      <li id="managua"></li>
+      <li id="masaya"></li>
+      <li id="carazo"></li>
+      <li id="granada"></li>
+      <li id="rivas"></li>
     </ul>
     
 ##Demo
