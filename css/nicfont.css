@@ -74,3 +74,21 @@ ul.nicfont.pequeno{
 .nicfont li.on {
 	color:#91cdd7;
 }
+
+#raan:after{content: "a";}
+#raas:after{content: "b";}
+#rio-san-juan:after{content: "c";}
+#chontales:after{content: "d";}
+#boaco:after{ content: "e";}
+#matagalpa:after{ content: "f";}
+#jinotega:after{ content: "g";}
+#esteli:after{ content: "h";}
+#madriz:after{ content: "i";}
+#nueva-segovia:after{ content: "j";}
+#chinandega:after{ content: "k";}
+#leon:after{ content: "l";}
+#managua:after{ content: "m";}
+#masaya:after{ content: "n";}
+#carazo:after{ content: "o";}
+#granada:after{ content: "p";}
+#rivas:after{ content: "q";}
