@@ -20,7 +20,7 @@
 
         <header>
           <h1>Nicfont</h1>
-          <h2>Una forma simple, fácil y moderna de mostrar un mapa de Nicaragua unicamente con HTML y CSS</h2>
+          <h2>Una forma simple, fácil y moderna de mostrar un mapa de Nicaragua únicamente con HTML y CSS</h2>
         </header>
 
         <section id="downloads" class="clearfix">
@@ -32,16 +32,21 @@
         <hr>
 
         <section id="main_content">
-<p><code>Nicfont</code> es un proyecto que aprobecha las virtudes de font-face y CSS3 para optimizar la forma de mostrar un mapa departamental de Nicaragua. <code>Nicfont</code> es una tipografía en donde cada letra representa el area vectorial de un departamento, de esta forma el area del mapa puede ser escalada a cualquier tamaño sin perder la calidad del gráfico.</p>
+<p><code>Nicfont</code> es un proyecto que aprovecha las virtudes de font-face y CSS3 para optimizar la forma de mostrar un mapa departamental de Nicaragua. <code>Nicfont</code> es una tipografía en donde cada letra representa el area vectorial de un departamento, de esta forma el area del mapa puede ser escalada a cualquier tamaño sin perder la calidad del gráfico.</p>
 
 <h3>Como Funciona?</h3>
-<p>Se ha creado una tipografia nicfont-webfont.ttf en donde se asigno a cada letra de la "a" a la "q" con un departamento del Nicaragua. Cada area de departamento esta ubicada de forma relativa con respecto a las otros depatamentos, de tal forma que al crear una secuencia de letras los departamentos se dibujan de forma solapada en una misma area.</p>
+<p>Se ha creado una tipografia nicfont-webfont.ttf en donde se asigno a cada letra de la "a" a la "q" 
+con un departamento del Nicaragua. Cada área de departamento esta ubicada de forma relativa con respecto a las 
+otros depatamentos, de tal forma que al crear una secuencia de letras los departamentos se dibujan de forma solapada 
+en una misma área.</p>
 
 <h3>Como usarla</h3>
-<p>Basicamente se debe importar el archivo de estilo <code>nicfont.css</code> y usar la siguiente estructura HTML</p>
+<p>Basicamente se debe importar el archivo de estilo <code>nicfont.css</code> y usar la siguiente estructura HTML:</p>
 <script src="https://gist.github.com/byroncorrales/4728911.js"></script>
 
-<p>El <code>id</code> en cada elemento <code>li</code> no es realmente requerido, pero sugiero ubicarlo para recordar que letra es cada departamento o para usarse como referencia para una acción personalizada que solo deba afectar a un departamento en específico. El mapa resultante deberia ser el siguiente. </p>
+<p>El <code>id</code> en cada elemento <code>li</code> no es realmente requerido, pero sugiero ubicarlo 
+para recordar que letra es cada departamento o para usarse como referencia para una acción personalizada que 
+solo deba afectar a un departamento en específico. El mapa resultante será el siguiente. </p>
 <!-- -->
   <ul class="nicfont"> 
     <li id="raan">a</li>
@@ -65,11 +70,13 @@
 
 <h3>Resaltar un departamento</h3>
 
-<p>Para resaltar un departamento de otro color es tan facil como agregar un estilo css al elemento, puede hacerse de muchas formas, pero por defecto ya se cuenta con la clase predefinida <code>on</code>, la cual solo debe agregarse al elemento de la siguiente manera</p>
+<p>Para resaltar un departamento de otro color es tan fácil como agregar un estilo css al elemento, 
+puede hacerse de muchas formas, pero por defecto ya se cuenta con la clase predefinida <code>on</code>, la cual 
+solo debe agregarse al elemento de la siguiente manera:</p>
 
 <script src="https://gist.github.com/byroncorrales/4728971.js"></script>
 
-<p>El mapa resultante seria el siguiente</p>
+<p>El mapa resultante será el siguiente:</p>
 
   <ul class="nicfont"> 
     <li id="raan" class="on">a</li>
@@ -93,11 +100,14 @@
 
 <h3>Escala de mapa</h3>
 
-<p>La escala de mapa es tambien controlada por CSS, por defecto tiene un tamaño de 400px de ancho por 400px de alto al igual que un tamaño de fuente de 400px tambien, pero estos valores pueden ser modificados o sobre escritos de la clase <code>ul.nicfont</code> que se encuentra dentro del archivo de estilos <code>nicfont.css</code> dentro del directorio "css". Un ejemplo de cambio de escala seria el siguiente.</p>
+<p>La escala de mapa es tambien controlada por CSS, por defecto tiene un tamaño de 400px de ancho por 
+400px de alto al igual que un tamaño de fuente de 400px tambien, pero estos valores pueden ser modificados 
+o sobre escritos de la clase <code>ul.nicfont</code> que se encuentra dentro del archivo de estilos 
+<code>nicfont.css</code> dentro del directorio "css". Un ejemplo de cambio de escala seria el siguiente.</p>
 
 <script src="https://gist.github.com/byroncorrales/4729023.js"></script>
 
-<p>Se tendria un resultado como el siguiente mapa<p>
+<p>Se tendrá un resultado como el siguiente mapa:<p>
   <style>
   ul.nicfont.pequeno{  
       width:200px;
@@ -128,7 +138,8 @@
 
 <h3>Ejemplo personalizado</h3>
 
-<p>En este ejemplo se muestra lo fácil que seria crear un mapa en donde se muestre de diferente color a los departamentos segmentados por las regiones del pais.</p>
+<p>En este ejemplo se muestra lo fácil que seria crear un mapa en donde se muestre 
+de diferente color a los departamentos segmentados por las regiones del pais.</p>
 
 <script src="https://gist.github.com/byroncorrales/4729073.js"></script>
 
