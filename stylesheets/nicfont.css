@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'nicfont-webfont';
+    src: url('../font/nicfont-webfont.eot');
+    src: url('../font/nicfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/nicfont-webfont.woff') format('woff'),
+         url('../font/nicfont-webfont.ttf') format('truetype'),
+         url('../font/nicfont-webfont.svg#testfontRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+ul.nicfont{
+	font-size-adjust:none;
+	font-family:"nicfont-webfont";	
+	font-weight: normal;
+	font-style: normal;
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	-moz-font-feature-settings: "liga=1";
+	-ms-font-feature-settings: "liga" 1;
+	-ms-font-feature-settings:"liga", "dlig"; 
+	display:block;
+	margin:0  auto;
+	padding:0;
+	list-style:none;	
+	display:block;
+	width:400px;
+	height: 400px;
+	font-size:400px;
+}
+
+ul.nicfont.grande{
+	width:600px;
+	height: 600px;
+	font-size:600px;
+}
+
+ul.nicfont.mediano{
+	width:400px;
+	height: 400px;
+	font-size:400px;
+}
+
+ul.nicfont.pequeno{
+	width:200px;
+	height: 200px;
+	font-size:200px;
+}
+
+.nicfont li{ 
+	font-family:"nicfont-webfont";	
+	float: left;
+	margin-left:-100%;
+	line-height:100%;
+	position: relative;
+	padding:0;
+	left: 101%;
+	width:100%;
+	list-style:none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
+	color:#d1d0ce;
+}
+.nicfont li.on {
+	color:#91cdd7;
+}
