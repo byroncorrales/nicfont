@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" href="css/nicfont.css">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -19,7 +20,7 @@
 
         <header>
           <h1>Nicfont</h1>
-          <h2>Una forma simple, facil y moderna de mostrar mapa de Nicaragua unicamente con HTML y CSS</h2>
+          <h2>Una forma simple, fácil y moderna de mostrar un mapa de Nicaragua unicamente con HTML y CSS</h2>
         </header>
 
         <section id="downloads" class="clearfix">
@@ -31,32 +32,158 @@
         <hr>
 
         <section id="main_content">
-          <h3>Welcome to GitHub Pages.</h3>
+<p><code>Nicfont</code> es un proyecto que aprobecha las virtudes de font-face y CSS3 para optimizar la forma de mostrar un mapa departamental de Nicaragua. <code>Nicfont</code> es una tipografía en donde cada letra representa el area vectorial de un departamento, de esta forma el area del mapa puede ser escalada a cualquier tamaño sin perder la calidad del gráfico.</p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h3>Como Funciona?</h3>
+<p>Se ha creado una tipografia nicfont-webfont.ttf en donde se asigno a cada letra de la "a" a la "q" con un departamento del Nicaragua. Cada area de departamento esta ubicada de forma relativa con respecto a las otros depatamentos, de tal forma que al crear una secuencia de letras los departamentos se dibujan de forma solapada en una misma area.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<h3>Como usarla</h3>
+<p>Basicamente se debe importar el archivo de estilo <code>nicfont.css</code> y usar la siguiente estructura HTML</p>
+<script src="https://gist.github.com/byroncorrales/4728911.js"></script>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>El <code>id</code> en cada elemento <code>li</code> no es realmente requerido, pero sugiero ubicarlo para recordar que letra es cada departamento o para usarse como referencia para una acción personalizada que solo deba afectar a un departamento en específico. El mapa resultante deberia ser el siguiente. </p>
+<!-- -->
+  <ul class="nicfont"> 
+    <li id="raan">a</li>
+    <li id="raas">b</li>  
+    <li id="rio-san-juan">c</li>
+    <li id="chontales">d</li>
+    <li id="boaco">e</li>
+    <li id="matagalpa">f</li>
+    <li id="jinotega">g</li>
+    <li id="esteli">h</li>
+    <li id="madriz">i</li>
+    <li id="nueva-segovia">j</li>
+    <li id="chinandega">k</li>
+    <li id="leon">l</li>
+    <li id="managua">m</li>
+    <li id="masaya">n</li>
+    <li id="carazo">o</li>
+    <li id="granada">p</li>
+    <li id="rivas">q</li>
+  </ul>
 
-<h3>Designer Templates</h3>
+<h3>Resaltar un departamento</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Para resaltar un departamento de otro color es tan facil como agregar un estilo css al elemento, puede hacerse de muchas formas, pero por defecto ya se cuenta con la clase predefinida <code>on</code>, la cual solo debe agregarse al elemento de la siguiente manera</p>
 
-<h3>Rather Drive Stick?</h3>
+<script src="https://gist.github.com/byroncorrales/4728971.js"></script>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>El mapa resultante seria el siguiente</p>
 
-<h3>Authors and Contributors</h3>
+  <ul class="nicfont"> 
+    <li id="raan" class="on">a</li>
+    <li id="raas">b</li>  
+    <li id="rio-san-juan">c</li>
+    <li id="chontales">d</li>
+    <li id="boaco">e</li>
+    <li id="matagalpa">f</li>
+    <li id="jinotega">g</li>
+    <li id="esteli">h</li>
+    <li id="madriz">i</li>
+    <li id="nueva-segovia">j</li>
+    <li id="chinandega">k</li>
+    <li id="leon">l</li>
+    <li id="managua">m</li>
+    <li id="masaya">n</li>
+    <li id="carazo">o</li>
+    <li id="granada">p</li>
+    <li id="rivas">q</li>
+  </ul>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h3>Escala de mapa</h3>
 
-<h3>Support or Contact</h3>
+<p>La escala de mapa es tambien controlada por CSS, por defecto tiene un tamaño de 400px de ancho por 400px de alto al igual que un tamaño de fuente de 400px tambien, pero estos valores pueden ser modificados o sobre escritos de la clase <code>ul.nicfont</code> que se encuentra dentro del archivo de estilos <code>nicfont.css</code> dentro del directorio "css". Un ejemplo de cambio de escala seria el siguiente.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<script src="https://gist.github.com/byroncorrales/4729023.js"></script>
+
+<p>Se tendria un resultado como el siguiente mapa<p>
+  <style>
+  ul.nicfont.pequeno{  
+      width:200px;
+      height: 200px;
+      font-size:200px;
+  }
+  </style>
+  
+  <ul class="nicfont pequeno"> 
+    <li id="raan">a</li>
+    <li id="raas">b</li>  
+    <li id="rio-san-juan">c</li>
+    <li id="chontales">d</li>
+    <li id="boaco">e</li>
+    <li id="matagalpa">f</li>
+    <li id="jinotega">g</li>
+    <li id="esteli">h</li>
+    <li id="madriz">i</li>
+    <li id="nueva-segovia">j</li>
+    <li id="chinandega">k</li>
+    <li id="leon">l</li>
+    <li id="managua">m</li>
+    <li id="masaya">n</li>
+    <li id="carazo">o</li>
+    <li id="granada">p</li>
+    <li id="rivas">q</li>
+  </ul>
+
+<h3>Ejemplo personalizado</h3>
+
+<p>En este ejemplo se muestra lo fácil que seria crear un mapa en donde se muestre de diferente color a los departamentos segmentados por las regiones del pais.</p>
+
+<script src="https://gist.github.com/byroncorrales/4729073.js"></script>
+
+<p>Mapa resultante</p>
+
+  <style>
+  ul.nicfont.tamano{  
+      width:300px;
+      height: 300px;
+      font-size:300px;
+  }
+  .nicfont li.pacifico{
+      color:#d1b08f;
+  }
+  .nicfont li.central{
+      color:#a4bc95;
+  }
+  .nicfont li.atlantico{
+      color:#8db6c1;
+  }
+  </style>
+  
+  <ul class="nicfont tamano"> 
+    <li id="raan" class="atlantico">a</li>
+    <li id="raas" class="atlantico">b</li>  
+    <li id="rio-san-juan" class="central">c</li>
+    <li id="chontales" class="central">d</li>
+    <li id="boaco" class="central">e</li>
+    <li id="matagalpa" class="central">f</li>
+    <li id="jinotega" class="central">g</li>
+    <li id="esteli" class="central">h</li>
+    <li id="madriz" class="central">i</li>
+    <li id="nueva-segovia" class="central">j</li>
+    <li id="chinandega" class="pacifico">k</li>
+    <li id="leon" class="pacifico">l</li>
+    <li id="managua" class="pacifico">m</li>
+    <li id="masaya" class="pacifico">n</li>
+    <li id="carazo" class="pacifico">o</li>
+    <li id="granada" class="pacifico">p</li>
+    <li id="rivas" class="pacifico">q</li>
+  </ul>
+
+<h3>Autor y recursos</h3>
+
+<p>Proyecto creado por <a href="https://github.com/byroncorrales" class="user-mention">Byron Corrales</a> con referencia del proyecto <a href="http://intridea.github.com/stately/">Stately</a> </p>
+<p>Recursos utilizados</p>
+<ul>
+  <li><a href="http://www.intridea.com/blog/2012/4/24/symbol-font">http://www.intridea.com/blog/2012/4/24/symbol-font</a></li>
+  <li><a href="http://www.freefontconverter.com/">http://www.freefontconverter.com/</a></li>
+  <li><a href="http://www.fontsquirrel.com/fontface/generator">http://www.fontsquirrel.com/fontface/generator</a></li>
+</ul>
+
+<h3>Contacto</h3>
+
+<p><a href="mailto:byroncorrales@gmail.com">byroncorrales@gmail.com</a> | <a href="http://twitter.com/byroncor">@byroncor</p>
         </section>
 
         <footer>
